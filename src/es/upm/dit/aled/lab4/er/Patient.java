@@ -131,6 +131,7 @@ public class Patient extends Thread {
 	 */
 	private void advanceProtocol() {
 		// TODO
+		
 	}
 
 	/**
@@ -140,6 +141,14 @@ public class Patient extends Thread {
 	 */
 	private void attendedAtLocation() {
 		// TODO
+		try {
+			System.out.println("Patient " + this.number + " is being attended at " + this.location);
+			sleep(this.location.getTime());
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+			Thread.currentThread().interrupt(); // Restore interrupted status
+	}
+
 	}
 
 	/**
