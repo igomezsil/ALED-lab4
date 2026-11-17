@@ -123,7 +123,9 @@ public class EmergencyRoom {
 	 * @param patient The Patient.
 	 */
 	public void admit(Patient patient) {
-		// TODO
+		patient.start();
+		System.out.println("Patient " + patient.getNumber() + " has been admitted.");
+
 	}
 
 	/**
