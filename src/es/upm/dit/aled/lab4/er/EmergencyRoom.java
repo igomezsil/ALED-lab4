@@ -134,7 +134,13 @@ public class EmergencyRoom {
 	 * @param patient The Patient.
 	 */
 	public void waitForDischarge(Patient patient) {
-		// TODO
+		try {
+			patient.join();
+			System.out.println("Patient " + patient.getNumber() + " has been discharged.");
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }
